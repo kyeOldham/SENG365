@@ -1,0 +1,1 @@
+ssh kno42@linux.cosc.canterbury.ac.nz -L 3306:db2.csse.canterbury.ac.nz:3306 -N

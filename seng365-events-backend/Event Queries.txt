@@ -1,0 +1,9 @@
+SELECT event.id, event.title, event_category FROM event inner join event_category on event.id = event_category.event_id WHERE event.title like '%VIP%' OR event.description like '%VIP%' AND event.organizer_id = 10
+
+
+
+
+SELECT e.id, e.title, ec.category_id, u.first_name, u.last_name, COUNT() e.capacity FROM event as e inner join event_category as ec on e.id = ec.event_id inner join event_attendees as ea on e.id = ea.event_id inner join user as u on e.organizer_id = u.id where ea.event_id 
+
+
+SELECT event_id, count(event_id) FROM `event_attendees` group by event_id
